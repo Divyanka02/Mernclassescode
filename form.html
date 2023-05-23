@@ -4,20 +4,183 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Form</title>
+    <title>Face Heaven||Registration</title>
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+body{
+    background-color: black;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size:40px;
+    font-weight: bolder;
+}
+.line
+{
+    width: 50%;
+    height: 3px;
+    background-color: white;
+    margin-left: 380px;
+    
+}
+.line2
+{
+    width: 50%;
+    height: 3px;
+    background-color: black;
+    margin-left: 100px;
+    
+}
+.section1
+{
+   
+    display: flex;
+    margin: 50px;
+   
+}
+.section1 .container1
+{
+    flex: 60%;
+   
+    background-image: url("job.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 60PX 0 60PX 60PX;
+  box-shadow: -10px -10px 10px whitesmoke;
+}
+.section1 .container2
+{
+    flex: 40%;
+  background-color: aliceblue;
+}
+.section1 .container2 form{
+    padding: 50px;
+    
+}
+.section1 .container2 h3
+{
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+label
+{
+    font-size: 18px;
+    font-weight: 400;
+
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],input[type="date"],
+input[type="file"],textarea
+
+{
+    margin: 5px;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+}
+input[type="radio"],
+input[type="checkbox"]
+{
+    margin: 5px;
+    border: 0;
+    width: 20%;
+    padding: 10px;
+}
+p
+{
+    margin: 10px;
+}
+span
+{
+    color: red;
+}
+.button
+{
+    width: 30%;
+    padding: 10px;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+    border: 0;
+
+}
+.button:hover
+{
+    color: black;
+    background-color: beige;
+}
+</style>
+
+
+
 </head>
 <body>
-    <form>
-<label for="fullname">Full Name :</label>
-<input type="text" placeholder="Enter your name" id="fullname">
-<br><br>
-<label for="pass">Password</label>
-<input type="password" id="pass">
-<br><br>
-<label for="mail">EMail</label>
-<input type="email" id="mail">
-<br><br>
-<input type="submit" value="submit">
+    <h1>GET JOBS</h1>
+    <div class="line"></div>
+    <div class="section1">
+        <div class="container1">
+
+        </div>
+        <div class="container2">
+            <form>
+        <h3>Registration From</h3>
+        <div class="line2"></div>
+        <p><label for="fullname">Full Name </label><span>*</span>
+            <input type="text" placeholder="Enter your name" id="fullname" required></p>
+
+<p><label for="mail">Email</label><span>*</span>
+    <input type="email" id="mail" placeholder="Enter your email" required ></p>
+
+<p>
+    <label for="DOB">D.O.B.</label>
+    <input id="DOB"  type="date"  min="1991-01-01"></p>
+<p>
+    <label for="gender">Gender</label><br>
+<input type="radio" id="male" name="gender">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" >
+<label for="female">Female</label>
+</p>
+<p>
+<label for="qualificATION" >Oualification</label><br>
+<input type="checkbox" ><label for="12th">12th</label>
+<input type="checkbox" ><label for="UG">UG</label>
+<input type="checkbox" ><label for="PG">PG</label>
+</p>
+<p><label for="github">Github URL</label>
+    <input type="url" id="github" placeholder="Enter your githuburl" ></p>
+
+
+<p><label for="query">Address </label>
+    <textarea id="query" rows="5" cols="30" placeholder="Enter your address" ></textarea>
+    </p>
+<p><label for="resume">Resume </label><span>*</span>
+    <input type="file" id="resume" required></p>
+
+<p><label for="pass">Password</label><span>*</span>
+    <input type="password" id="pass" placeholder="Enter password" required>  </p>
+    <p>
+    <label for="pass">Confirm Password</label>
+    <input type="password" id="pass" placeholder="Enter your confirm password" >
+    </p>
+
+<input type="reset" class="button" value="Reset">
+ <input type="submit" value="Submit" class="button"> 
     </form>
+        </div>
+    </div>
+    
 </body>
 </html>
